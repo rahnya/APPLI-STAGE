@@ -1,0 +1,75 @@
+@import url(root.Css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--foncé);
+    color: var(--blanc);
+}
+
+
+.deconnexion {
+    width: 20px;
+    height: 20px;
+    background-color: var(--foncé);
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.stages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.blocstage {
+    background-color: var(--bleupastel);
+    color:var(--foncé);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.stage-info {
+    display: flex;
+    align-items: center;
+}
+
+.iconestatut {
+    width: 20px;
+    height: 20px;
+    background-color: var(--vert);
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.stage-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background-color: var(--foncé);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--bleuclair);
+}

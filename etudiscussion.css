@@ -1,0 +1,138 @@
+@import url(root.Css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--foncé);
+    color: var(--blanc);
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: var(--blanc);
+    color: var(--foncé);
+    border: none;
+    padding: 10px 10px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--bleuclair);
+    color: var(--blanc);
+}
+
+.discussion-list .discussion-item {
+    background-color: var(--bleupastel);
+    color: var(--foncé);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.stages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.blocstage {
+    background-color: var(--bleupastel);
+    color:var(--foncé);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.stage-info {
+    display: flex;
+    align-items: center;
+}
+
+.iconestatut {
+    width: 20px;
+    height: 20px;
+    background-color: var(--vert);
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+.discussion-container {
+    display: flex;
+    height: 400px;
+}
+
+.sidebar {
+    background-color: #F0F0F0;
+    padding: 20px;
+    width: 25%;
+}
+
+.search input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.chat-list .chat-item {
+    margin-bottom: 10px;
+}
+
+.chat-content {
+    background-color: #001B48;
+    padding: 20px;
+    width: 75%;
+    position: relative;
+}
+
+.message {
+    background-color: #A8C6E5;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 15px;
+}
+
+.message.sent {
+    text-align: right;
+    background-color: #00509E;
+}
+
+.message-input {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-input input {
+    width: 80%;
+    padding: 10px;
+}
+
+.message-input button {
+    width: 15%;
+    padding: 10px;
+    background-color: #00509E;
+    color: white;
+    border: none;
+}
