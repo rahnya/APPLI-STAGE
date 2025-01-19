@@ -1,0 +1,60 @@
+:root {
+    --blanc: #FEFEFF;
+    --foncé: #1E3666;
+    --bleuclair: #0698D6;
+    --jaune: #FFED00;
+    --vert: #5BA57C;
+    --beige: #D2CCAF;
+    --bleupastel: #D2E3F4;
+}
+
+h1 {
+    color: var(--blanc);
+    font-family: 'Inter', serif;
+    font-size: 35px;
+
+}
+
+h3 {
+    font-size: 22px;
+    color: var(--blanc);
+    font-family: 'Inter', serif;
+}
+
+
+h4 {
+    font-size: 20px;
+    color: var(--blanc);
+    font-family: 'Inter', serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blanc);
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    font-weight: bold;
+    color: var(--foncé)
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+nav a {
+    margin-left: 20px;
+    color: var(--foncé);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Inter', serif;
+}

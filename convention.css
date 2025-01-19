@@ -1,4 +1,4 @@
-@import url(root.Css);
+@import url(root.css);
 
 * {
     margin: 0;
@@ -25,11 +25,15 @@ ol li {
     font-size: 20px;
 }
 
+.actif {
+    color: var(--bleuclair);
+}
+
 main {
     display: flex;
     flex-direction: row;
     background-color: var(--bleuclair);
-    gap: 5%;
+    gap: 4%;
 }
 
 h1 {
