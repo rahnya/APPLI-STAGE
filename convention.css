@@ -1,0 +1,133 @@
+@import url(root.Css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#etape {
+    background-color: var(--foncé);
+    display: flex;
+    flex-direction: column;
+}
+ol {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 150px 50px;
+    position: sticky;
+    top: 0;
+}
+
+ol li {
+    font-family: 'Inter', serif;
+    color: var(--blanc);
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bleuclair);
+    gap: 5%;
+}
+
+h1 {
+    text-align: center;
+}
+
+#etape1, #etape2, #etape3, #recapitulatif {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 50px;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 200px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#edt {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+        align-items: center;
+    gap: 10px;
+}
+
+.champ {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-family: 'Inter', serif;
+    color: var(--blanc);
+    font-size: 18px;
+}
+
+input[type="text" i], input[type="email" i] {
+    height: 35px;
+    width: 425px;
+    border-radius: 15px;
+    border: none;
+    padding: 0px 10px; 
+    font-family: 'Inter', serif;
+}
+
+input[type="date" i] {
+    height: 35px;
+    width: 165px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;  
+    font-family: 'Inter', serif;
+}
+
+input[type="number" i] {
+    height: 30px;
+    width: 40px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Inter', serif;
+}
+
+textarea {
+    border-radius: 25px;
+    border: none;
+    padding: 10px; 
+    width: 425px; 
+    font-family: 'Inter', serif;
+}
+
+.next {
+    display: flex;
+    justify-content: center;
+}
+button {
+    background-color: var(--foncé);
+    color: var(--blanc);
+    font-size: 20px;
+    margin: 10px;
+    height: 40px;
+    width: 200px;
+    border-radius: 15px;
+    font-family: 'Inter', serif;
+    border: none;
+}
