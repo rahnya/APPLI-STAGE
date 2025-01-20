@@ -22,17 +22,17 @@
 
     <h1>S'inscrire</h1>
 
-    <form id="inscription" action="" method="post">
+    <form id="inscription" action="config.php?action=inscrire" method="post">
     <div class="section">
         <div class="champ">
         <label for="">Vous êtes</label>
         <div class="role">
         <div class="row">
-            <input type="radio" name="role" id="">
+            <input type="radio" name="role" id="" value="etudiant">
             <label for="">Etudiant(e)</label>
         </div>
         <div class="row">
-            <input type="radio" name="role" id="">
+            <input type="radio" name="role" id="" value="tuteur_de_stage"> 
             <label for="">Enseignant(e)</label>
         </div>
         </div>
@@ -40,29 +40,29 @@
 
         <div class="champ">
             <label for="">Nom de famille :</label>
-            <input type="text">
+            <input type="text" name="nom">
         </div>
 
         <div class="champ">
             <label for="">Prénom :</label>
-            <input type="text">
+            <input type="text" name="prenom">
         </div>
         </div>
     </div>
     <div class="section">
         <div class="champ">
             <label for="">Email :</label>
-            <input type="email">
+            <input type="email" name="email">
         </div>
 
         <div class="champ">
             <label for="">Mot de passe :</label>
-            <input type="password">
+            <input type="password" name="motDePasse">
         </div>
 
         <div class="champ">
             <label for=""> Confirmation de mot de passe : </label>
-            <input type="password">
+            <input type="password" name="confirmationMotDePasse">
         </div>
 
         <div id="inscrire">
