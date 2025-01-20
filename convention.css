@@ -29,7 +29,7 @@ ol li {
     color: var(--bleuclair);
 }
 
-main {
+#convention {
     display: flex;
     flex-direction: row;
     background-color: var(--bleuclair);
