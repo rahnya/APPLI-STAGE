@@ -24,7 +24,7 @@ section {
 }
 
 
-main {
+#connexion {
     display: flex;
     flex-direction: column;
     justify-content: center;

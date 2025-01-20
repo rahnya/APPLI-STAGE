@@ -1,0 +1,108 @@
+@import url(root.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;  
+}
+header nav a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    background-color: var(--bleupastel);
+    padding: 50px 50px 90px 50px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--foncé);
+}
+
+#inscription {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+} 
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+        align-items: center;
+    gap: 10px;
+}
+
+.role {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.champ {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-family: 'Inter', serif;
+    color: var(--foncé);
+    font-size: 18px;
+}
+
+input[type="text" i], input[type="email" i], input[type="password" i] {
+    height: 35px;
+    width: 425px;
+    border-radius: 15px;
+    border: none;
+    padding: 0px 10px; 
+    font-family: 'Inter', serif;
+}
+
+#inscrire {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button {
+    background-color: var(--bleuclair);
+    color: var(--blanc) ;
+    font-size: 20px;
+    margin: 10px;
+    height: 40px;
+    width: 200px;
+    border-radius: 15px;
+    font-family: 'Inter', serif;
+    border: none;
+}
+
+#autre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 180px;
+}
+
+#autre a {
+    font-family: 'Inter', serif;
+    color: var(--foncé); 
+    font-size: 16px;
+}
