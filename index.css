@@ -61,7 +61,7 @@ main {
     gap: 35px;
 }
 
-input[type="text" i] {
+input[type="text" i], input[type="password" i] {
     height: 50px;
     width: 425px;
     border-radius: 20px;
