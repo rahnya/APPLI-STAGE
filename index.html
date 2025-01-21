@@ -1,44 +1,41 @@
 <!DOCTYPE html>
-<html lang="fr">
+  <html lang="fr">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Espace Stage de l'Université de Toulon</title>
     <link rel="stylesheet" href="CSS/index.css">
-</head>
+  </head>
 
-<body>
-  <section>
-    <img src="images/logo université de toulon.png" alt="" width="440px">
-    <img src="images/illustration.png" alt="" width="480px">
-  </section>
+  <body>
+    <section>
+      <img src="images/logo université de toulon.png" alt="" width="440px">
+      <img src="images/illustration.png" alt="" width="480px">
+    </section>
 
-
-
-<form id="connexion" action="config.php?action=connexion" method="post">
-<div id="titre">
-<h1>STAGE</h1>
-<h2>Accédez à votre espace stage !</h2>
-</div>
-<div id="connexionform">
-<input type="email" placeholder="Adresse mail" name="email">
-<input type="password" placeholder="Mot de passe" name="motDePasse">
-</div>
-
-<div id="connexion">
-<button type="submit">Se connecter</button>
-</div>
-
-<div id="autre">
-    <a href="#">Première connexion</a>
-    <a href="#">Besoin d'aide ?</a>
-</div>
-</form>
-
-
-</body>
+    <form id="connexion" action="connexion.php" method="post">
+      <div id="titre">
+        <h1>STAGE</h1>
+        <h2>Accédez à votre espace stage !</h2>
+      </div>
+      <div id="connexionform">
+        <input type="email" placeholder="Adresse email" name="email" id="email" required>
+        <input type="password" placeholder="Mot De Passe" name="password" id="password" required>
+      </div>
+      <!-- Champ caché pour indiquer l'action -->
+      <input type="hidden" name="action" value="connexion">
+      <div id="connexion">
+        <button type="submit">Se connecter</button>
+      </div>
+      <div id="autre">
+        <a href="inscription.html">Première connexion</a>
+        <a href="#">Besoin d'aide ?</a>
+      </div>
+    </form>
+    
+  </body>
 </html>
