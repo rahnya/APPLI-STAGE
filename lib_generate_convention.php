@@ -1,5 +1,5 @@
 <?php
-require('fpdf186/fpdf.php');
+require('..fpdf186/fpdf.php');
 
 // Récupération des données POST avec vérification
 $siret = isset($_POST['siret']) ? htmlspecialchars($_POST['siret']) : '';
