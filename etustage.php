@@ -23,11 +23,7 @@
         <h1>Mes stages</h1>
         <div class="stages-list">
             <?php
-            // Connexion à la base de données
-            $host = "127.0.0.1";
-            $dbname = "stage";
-            $username = "root";
-            $password = "";
+            go global bdd ;
 
             try {
                 $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
