@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 22 jan. 2025 à 12:53
--- Version du serveur : 8.3.0
--- Version de PHP : 8.2.18
+-- Généré le : ven. 24 jan. 2025 à 20:17
+-- Version du serveur : 8.0.31
+-- Version de PHP : 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `stage`
+-- Base de données : `stagefinal`
 --
 
 -- --------------------------------------------------------
@@ -165,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `noyau_utilisateur` (
   `noyau_utilisateur__email` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `noyau_utilisateur__verrou` int DEFAULT NULL,
   PRIMARY KEY (`noyau_utilisateur__id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `noyau_utilisateur`
@@ -173,7 +173,9 @@ CREATE TABLE IF NOT EXISTS `noyau_utilisateur` (
 
 INSERT INTO `noyau_utilisateur` (`noyau_utilisateur__id`, `noyau_utilisateur__nom`, `noyau_utilisateur__prenom`, `noyau_utilisateur__sigle`, `noyau_utilisateur__mdp`, `noyau_utilisateur__email`, `noyau_utilisateur__verrou`) VALUES
 (7, 'ABOUDOU', 'Miriame', 'etudiant', 'Miriame974', 'ab.miriame@gmail.com', NULL),
-(8, 'Lanyeri', 'Rahnya', 'tuteur_de_stage', 'Rahnya83', 'rahnya@gmail.com', NULL);
+(8, 'Lanyeri', 'Rahnya', 'etudiant', 'blabla', 'rahnya@gmail.com', NULL),
+(9, 'Pessel', 'Nathalie', 'tuteur_de_stage', 'pasdidee', 'nathalie.pessel@gmail.com', NULL),
+(10, 'iscariot', 'Nicolas', 'tuteur_de_stage', 'Nicolaslegoat', 'nicolas.iscariot@gmail.com', NULL);
 
 -- --------------------------------------------------------
 
@@ -239,8 +241,9 @@ CREATE TABLE IF NOT EXISTS `stage_convention` (
 --
 
 INSERT INTO `stage_convention` (`stage_convention_id_convention`, `stage_convention_siret`, `stage_convention_ape`, `stage_convention_nom_entreprise`, `stage_convention_tel_entreprise`, `stage_convention_email_entreprise`, `stage_convention_nom_signataire_entreprise`, `stage_convention_poste_signataire_entreprise`, `stage_convention_service_entreprise`, `stage_convention_lieu_entreprise`, `stage_convention_numero_etudiant`, `stage_convention_date_naissance_etudiant`, `stage_convention_tel_etudiant`, `stage_convention_email_perso_etudiant`, `stage_convention_email_etudiant`, `stage_convention_cpam_etudiant`, `stage_convention_sujet_stage`, `stage_convention_date_debut`, `stage_convention_date_fin`, `stage_convention_semaines_stage`, `stage_convention_heures_par_jour_stage`, `stage_convention_repartition`, `stage_convention_heures_par_semaine_stage`, `stage_convention_commentaire_stage`, `stage_convention_activites_stage`, `stage_convention_competences_stage`, `stage_convention_nom_maitre_stage`, `stage_convention_prenom_maitre_stage`, `stage_convention_poste_maitre_stage`, `stage_convention_tel_maitre_stage`, `stage_convention_email_maitre_stage`, `stage_convention_encadrement_stage`, `stage_convention_nb_conges`, `stage_convention_etat`, `stage_convention_sexe`, `stage_convention_gratification`, `stage_convention_avantages_5bis`, `stage_convention_avantages_5ter`, `stage_convention_signature_etudiant`, `stage_convention_signature_entreprise`, `stage_convention_nom_etudiant`, `stage_convention_prenom_etudiant`, `stage_convention_etudiant_id`, `stage_convention_tuteur_id`, `stage_convention_prenom_signataire_entreprise`, `stage_convention_nb_jours_stage`) VALUES
-(1, 8888, '5555', 'OHMYGLOW', NULL, 'spencetily@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'validée', NULL, '', NULL, NULL, 1, 0, '', 0, 7, 8, '', ''),
-(3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, 0, 0, '', 0, NULL, NULL, '', '');
+(1, 8888, '5555', 'OHMYGLOW', NULL, 'spencetily@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'validée', NULL, '', NULL, NULL, 1, 0, '', 0, 7, 9, '', ''),
+(2, 610, NULL, 'Swello', 741020110, 'swello@gmail.com', 'didz', 'rbkep', 'MMI', 'Tln', '12410', NULL, '047741047', 'rahnya@gmail.com', 'rahnya-lanyeri@univ-tln.fr', 'rfved ', 'stage 2e année ', '03/02/2025', '28/03/2025', 8, 6, 0, 30, 'Ce stage va être fantastique !', 'activités liés à MMI ', 'bcp de compétences différentes', 'Noble', 'Jonathan', 'Demi boss', '07410410', 'lej@swello.fr', 'vrzevef', 'aucun', 'validée', 'feminin', '0', 'aucun', 'aucun', 1, 1, 'Lanyeri', 1, 8, 10, 'jknv ', '40'),
+(3, 610, NULL, 'Leclerc', 741020110, 'leclerc@gmail.com', 'didz', 'rbkep', 'MMI', 'Tln', '12410', NULL, '047741047', 'rahnya@gmail.com', 'rahnya-lanyeri@univ-tln.fr', 'rfved ', 'stage 2e année ', '03/02/2026', '28/03/2026', 8, 6, 0, 30, 'Ce stage va être fantastique !', 'activités liés à MMI ', 'bcp de compétences différentes', 'panda', 'Mr Panda', 'Demi boss', '07410410', 'lej@leclerc.fr', 'vrzevef', 'aucun', 'validée', 'feminin', '0', 'aucun', 'aucun', 1, 1, 'Lanyeri', 1, 7, 10, 'jknv ', '40');
 
 -- --------------------------------------------------------
 
@@ -258,7 +261,21 @@ CREATE TABLE IF NOT EXISTS `stage_message` (
   PRIMARY KEY (`stage_message_id_message`),
   KEY `fk_stage_message_id_auteur_message` (`stage_message_id_auteur_message`),
   KEY `fk_message_stage` (`stage_message_stage_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `stage_message`
+--
+
+INSERT INTO `stage_message` (`stage_message_id_message`, `stage_message_id_auteur_message`, `stage_message_contenu_message`, `stage_message_privée`, `stage_message_stage_id`) VALUES
+(18, 7, 'Mon 1er message vers Leclerc', 0, 3),
+(19, 7, 'Coucouuuu', 0, 1),
+(16, 7, 'Bonjour, est-ce que mon message s\'envoie bien ?', 0, 1),
+(17, 7, 'Bonjour, est-ce que mon message s\'envoie bien ?', 0, 1),
+(20, 7, 'testetdfghvghugvjghkb', 0, 1),
+(21, 10, 'Bonjour est-ce que je parle bien au M ??', 0, 3),
+(22, 7, 'Ouiii, rahnya est tjs en train de work pour qu\'on voit qui envoie quel message', 0, 3),
+(23, 10, 'bonjour !!', 0, 2);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
