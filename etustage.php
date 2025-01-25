@@ -23,7 +23,7 @@
         <h1>Mes stages</h1>
         <div class="stages-list">
             <?php
-            require_once '..config.php';
+            require_once 'config.php';
 
                 // Récupérer les données des stages
                 $query = "SELECT 
