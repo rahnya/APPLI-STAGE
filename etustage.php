@@ -11,11 +11,13 @@
 </head>
 <body>
     <header>
-        <div class="logo">LOGO</div>
+        <div class="logo">
+            <a href="index.php"><img src="IMAGES/logo université de toulon.png" alt="logo de l'université de Toulon" width="200px"></a>
+        </div>
         <nav>
             <a href="etustage.php">Stages</a>
             <a href="discussion.php">Discussions</a>
-            <a href="deconnexion.php"><i class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="include/lib_deconnexion.php"><img src="IMAGES/deconnexion.png"></a>
         </nav>
     </header>
     
