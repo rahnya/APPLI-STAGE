@@ -1,6 +1,6 @@
 <?php
 // Autaurise l'accès aux données utilisateur
-require_once 'db.php';
+require_once '..db.php';
 
 function authenticate($email, $password) {
     global $pdo;
