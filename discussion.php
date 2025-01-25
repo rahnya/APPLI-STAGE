@@ -4,7 +4,7 @@ require_once 'db.php';
 
 // Vérification de l'authentification
 if (!isset($_SESSION['user'])) {
-    header('Location: connexion.php');
+    header('Location: index.php');
     exit;
 }
 
