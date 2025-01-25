@@ -16,11 +16,11 @@
       <img src="images/logo université de toulon.png" alt="" width="440px">
       <img src="images/illustration.png" alt="" width="480px">
     </section>
-    <form method="POST" action="connexionControleur.php">
+    <form method="POST" action="include/connexionControleur.php">
         
         
     </form>
-    <form id="connexion" method="post" action="authController.php" >
+    <form id="connexion" method="post" action="include/authController.php" >
       <div id="titre">
         <h1>STAGE</h1>
         <h2>Accédez à votre espace stage !</h2>
