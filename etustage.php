@@ -23,11 +23,7 @@
         <h1>Mes stages</h1>
         <div class="stages-list">
             <?php
-            go global bdd ;
-
-            try {
-                $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            require_once '..config.php';
 
                 // Récupérer les données des stages
                 $query = "SELECT 
