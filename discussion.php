@@ -93,7 +93,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <header>
-        <div class="logo">LOGO</div>
+        <div class="logo">
+            <a href="index.php"><img src="logo université de toulon.png" alt="" width="200px"></a>
+        </div>
         <nav>
             <a href="etustage.php">Stages</a>
             <a href="discussion.php">Discussions</a>
