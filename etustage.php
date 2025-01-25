@@ -14,8 +14,8 @@
         <div class="logo">LOGO</div>
         <nav>
             <a href="etustage.php">Stages</a>
-            <a href="etudiscussion.php">Discussions</a>
-            <a href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="discussion.php">Discussions</a>
+            <a href="deconnexion.php"><i class="fa-solid fa-right-from-bracket"></i></a>
         </nav>
     </header>
     
