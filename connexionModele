@@ -1,0 +1,11 @@
+<?php
+// Autaurise l'accès aux données utilisateur
+require_once 'db.php';
+
+function authenticate($email, $password) {
+    global $pdo;
+    $stmt = $pdo->prepare("SELECT * FROM noyau_utilisateur WHERE noyau_utilisateur__email = :email AND noyau_utilisateur__mdp = :password");
+    $stmt->execute(['email' => $email, 'password' => $password]);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+?>
