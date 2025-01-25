@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <header>
+<header>
         <div class="logo">
             <a href="index.php"><img src="IMAGES/logo université de toulon.png" alt="logo de l'université de Toulon" width="200px"></a>
         </div>
@@ -51,9 +51,6 @@
                             </div>
                           </div>";
                 }
-            } catch (PDOException $e) {
-                echo "<p>Erreur de connexion à la base de données : " . $e->getMessage() . "</p>";
-            }
             ?>
         </div>
     </main>
