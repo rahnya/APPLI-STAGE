@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 
     if ($user) {
         $_SESSION['user'] = $user;
-        header('Location: ..index.php');
+        header('Location: ../discussion.php');
         exit;
     } else {
         $error = 'Identifiants incorrects.';
@@ -20,5 +20,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 }
 
 // Pour afficher la page avec le formulaire à nouveau
-require_once '..discussion.php';
+require_once 'index.php';
 ?>
