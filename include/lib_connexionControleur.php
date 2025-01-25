@@ -20,5 +20,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 }
 
 // Pour afficher la page avec le formulaire à nouveau
-require_once 'index.php';
+require_once '../index.php';
 ?>
