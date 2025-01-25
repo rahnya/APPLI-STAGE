@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <nav>
             <a href="etustage.php">Stages</a>
             <a href="discussion.php">Discussions</a>
-            <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="deconnexion.php"><i class="fa-solid fa-right-from-bracket"></i></a>
         </nav>
     </header>
 
