@@ -88,13 +88,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/etudiscussion.css">
+    <link rel="stylesheet" href="CSS/discussion.css">
     <title> Ma messagerie </title>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="index.php"><img src="IMAGES/logo université de toulon.png" alt="logo de l'université de Toulon" width="200px"></a>
+            <a href="index.php"><img src="IMAGES/logo université de toulon.png" alt="" width="200px"></a>
         </div>
         <nav>
             <a href="etustage.php">Stages</a>
