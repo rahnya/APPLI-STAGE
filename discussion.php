@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <nav>
             <a href="etustage.php">Stages</a>
             <a href="discussion.php">Discussions</a>
-            <a href="include/lib_deconnexion.php"><img src="IMAGES/deconnexion.png"></a>
+            <a href="include/lib_deconnexion.php"><img src="IMAGES/deconnexion.png" alt="lien de déconnexion" width="40px"></a>
         </nav>
     </header>
 
