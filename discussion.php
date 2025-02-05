@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="index.php"><img src="IMAGES/logo université de toulon.png" alt="" width="200px"></a>
         </div>
         <nav>
-            <a href="etustage.php">Stages</a>
+            <a href="stage.php">Stages</a>
             <a href="discussion.php">Discussions</a>
             <a href="include/lib_deconnexion.php"><img src="IMAGES/deconnexion.png" alt="lien de déconnexion" width="40px"></a>
         </nav>
