@@ -87,25 +87,28 @@ class Convention {
       return false;
   }
   
-  public function search($keywords){
-    $query = "SELECT * FROM stage_convention
-              WHERE stage_convention_nom_etudiant LIKE ? 
-                 OR stage_convention_prenom_etudiant LIKE ?
-                 OR stage_convention_nom_entreprise LIKE ?
-                 OR stage_convention_sujet_stage LIKE ?
-                 OR stage_convention_email_etudiant LIKE ?
-              ORDER BY stage_convention_id_convention DESC";
+public function search($keywords){
+    $query = "SELECT * FROM " . $this->table_name . "
+              WHERE stage_convention_nom_entreprise LIKE ?
+              OR stage_convention_nom_etudiant LIKE ?
+              OR stage_convention_prenom_etudiant LIKE ?
+              OR stage_convention_sujet_stage LIKE ?
+              ORDER BY stage_convention_date_debut DESC";
 
     $stmt = $this->conn->prepare($query);
 
+    // sanitize and format keywords
+    $keywords = htmlspecialchars(strip_tags($keywords));
     $keywords = "%{$keywords}%";
+
+    // bind parameters
     $stmt->bindParam(1, $keywords);
     $stmt->bindParam(2, $keywords);
     $stmt->bindParam(3, $keywords);
     $stmt->bindParam(4, $keywords);
-    $stmt->bindParam(5, $keywords);
 
     $stmt->execute();
+
     return $stmt;
 }
   // Modifier la convention
