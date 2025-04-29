@@ -143,12 +143,23 @@ public function search($keywords){
       return false;
   }
 
-  public function delete() {
-  $query = "DELETE FROM " . $this->table_name . " WHERE stage_convention_id_convention = :id";
-  $stmt = $this->conn->prepare($query);
+public function delete()
+{
+    $query = "DELETE FROM " . $this->table_name . " WHERE stage_convention_id_convention = ?";
 
-  $stmt->bindParam(':id', $this->stage_convention_id_convention, PDO::PARAM_INT);
+    $stmt = $this->conn->prepare($query);
 
-  return $stmt->execute();
+    // nettoyage
+    $this->stage_convention_id_convention = htmlspecialchars(strip_tags($this->stage_convention_id_convention));
+
+    // bind
+    $stmt->bindParam(1, $this->stage_convention_id_convention, PDO::PARAM_INT);
+
+    // exécution
+    if ($stmt->execute()) {
+        return true;
+    }
+
+    return false;
 }
 }
