@@ -139,4 +139,13 @@ class Convention {
       }
       return false;
   }
+
+  public function delete() {
+  $query = "DELETE FROM " . $this->table_name . " WHERE stage_convention_id_convention = :id";
+  $stmt = $this->conn->prepare($query);
+
+  $stmt->bindParam(':id', $this->stage_convention_id_convention, PDO::PARAM_INT);
+
+  return $stmt->execute();
+}
 }
