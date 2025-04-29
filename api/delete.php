@@ -1,46 +1,39 @@
 <?php
-// Inclure les fichiers nécessaires
+// required headers
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Max-Age: 3600");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+
+// include database and object file
 include_once '../config/database.php';
 include_once '../objects/convention.php';
 
-// Vérifier que la requête est de type POST
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    echo json_encode([
-        'message' => 'Méthode non autorisée. Utilisez POST.'
-    ]);
-    exit();
-}
-
-// Récupérer les données envoyées (POST ou JSON)
-$data = $_POST;
-if (empty($data) && file_get_contents('php://input')) {
-    $data = json_decode(file_get_contents('php://input'), true);
-}
-
-// Vérifier que l'ID de la convention est présent
-if (!isset($data['stage_convention_id_convention'])) {
-    echo json_encode([
-        'message' => 'ID de la convention manquant.'
-    ]);
-    exit();
-}
-
-// Connexion à la base de données
+// get database connection
 $database = new Database();
 $db = $database->getConnection();
 
-// Initialiser l'objet StageConvention
+// prepare object
 $stage = new Convention($db);
-$stage->stage_convention_id_convention = $data['stage_convention_id_convention'];
 
-// Tenter la suppression
-if ($stage->delete()) {
-    echo json_encode([
-        'message' => 'Convention supprimée avec succès.'
-    ]);
+// get posted data
+$data = json_decode(file_get_contents("php://input"));
+
+// Vérifie que l’ID est bien fourni
+if (!empty($data->stage_convention_id_convention)) {
+    $stage->stage_convention_id_convention = $data->stage_convention_id_convention;
+
+    // suppression
+    if ($stage->delete()) {
+        http_response_code(200);
+        echo json_encode(["message" => "Convention supprimée avec succès."]);
+    } else {
+        http_response_code(503);
+        echo json_encode(["message" => "Impossible de supprimer la convention."]);
+    }
 } else {
-    echo json_encode([
-        'message' => 'La suppression a échoué.'
-    ]);
+    http_response_code(400);
+    echo json_encode(["message" => "ID de convention manquant."]);
 }
 ?>
