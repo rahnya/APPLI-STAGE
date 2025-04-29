@@ -2,6 +2,7 @@
 
 class Convention {
   private $conn;
+  private $table_name = "stage_convention";
   public $stage_convention_id_convention;
   public $stage_convention_siret;
   public $stage_convention_ape;
