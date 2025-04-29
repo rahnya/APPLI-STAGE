@@ -108,4 +108,35 @@ class Convention {
     $stmt->execute();
     return $stmt;
 }
+  // Modifier la convention
+    function update(){
+      // update query
+      $query = "UPDATE
+      " . $this->table_name . "
+      SET
+      stage_convention_sujet_stage = :stage_convention_sujet_stage,
+      stage_convention_etat = :stage_convention_etat,
+      stage_convention_siret = :stage_convention_siret
+      WHERE stage_convention_id_convention = :stage_convention_id_convention";
+
+      // prepare query statement
+      $stmt = $this->conn->prepare($query);
+
+      // sanitize
+      $this->stage_convention_sujet_stage=htmlspecialchars(strip_tags($this->stage_convention_sujet_stage));
+      $this->stage_convention_etat=htmlspecialchars(strip_tags($this->stage_convention_etat));
+      $this->stage_convention_siret=htmlspecialchars(strip_tags($this->stage_convention_siret));
+      $this->stage_convention_id_convention=htmlspecialchars(strip_tags($this->stage_convention_id_convention));
+
+      // bind new values
+      $stmt->bindParam(':stage_convention_id_convention', $this->stage_convention_id_convention);
+      $stmt->bindParam(':stage_convention_sujet_stage', $this->stage_convention_sujet_stage);
+      $stmt->bindParam(':stage_convention_etat', $this->stage_convention_etat);
+      $stmt->bindParam(':stage_convention_siret', $this->stage_convention_siret);
+      // execute the query
+      if($stmt->execute()){
+      return true;
+      }
+      return false;
+  }
 }
