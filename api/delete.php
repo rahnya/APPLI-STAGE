@@ -8,7 +8,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 // include database and object file
 include_once '../config/database.php';
-include_once '../objects/convention.php';
+include_once 'convention.php';
 
 // get database connection
 $database = new Database();
