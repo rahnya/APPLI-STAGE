@@ -1,3 +1,4 @@
+
 <?php
     // required headers
     header("Access-Control-Allow-Origin: *");
@@ -8,7 +9,7 @@
 
     // include database and object files
     include_once '../config/database.php';
-    include_once '../product/convention.php';
+    include_once 'convention.php';
 
     // get database connection
     $database = new Database();
