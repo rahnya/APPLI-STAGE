@@ -1,7 +1,8 @@
+
 <?php
 // Inclure les fichiers nécessaires
 include_once '../config/database.php';
-include_once '../objects/convention.php';
+include_once 'convention.php';
 
 // Vérifier si l'ID est passé dans l'URL
 if (!isset($_GET['id'])) {
