@@ -1,0 +1,267 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "API Stages",
+    "description": "Documentation de l'API pour la gestion des utilisateurs, des messages et des conventions."
+  },
+  "host": "localhost:8888",
+  "basePath": "/api-stages/api/1.0",
+  "schemes": ["http"],
+  "paths": {
+    "/utilisateur/create.php": {
+      "post": {
+        "summary": "Créer un utilisateur",
+        "description": "Ajoute un nouvel utilisateur à la base de données.",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Utilisateur"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Utilisateur créé avec succès."
+          },
+          "400": {
+            "description": "Données incomplètes."
+          },
+          "503": {
+            "description": "Service indisponible."
+          }
+        }
+      }
+    },
+    "/utilisateur/read.php": {
+      "get": {
+        "summary": "Lire les utilisateurs",
+        "description": "Récupère tous les utilisateurs de la base de données.",
+        "responses": {
+          "200": {
+            "description": "Utilisateurs récupérés avec succès."
+          },
+          "404": {
+            "description": "Aucun utilisateur trouvé."
+          }
+        }
+      }
+    },
+    "/convention/create.php": {
+      "post": {
+        "summary": "Créer une convention",
+        "description": "Ajoute une nouvelle convention à la base de données.",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Convention"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Convention créée avec succès."
+          },
+          "400": {
+            "description": "Données incomplètes."
+          },
+          "503": {
+            "description": "Service indisponible."
+          }
+        }
+      }
+    },
+    "/convention/read.php": {
+      "get": {
+        "summary": "Lire les conventions",
+        "description": "Récupère toutes les conventions de la base de données.",
+        "responses": {
+          "200": {
+            "description": "Conventions récupérées avec succès."
+          },
+          "404": {
+            "description": "Aucune convention trouvée."
+          }
+        }
+      }
+    },
+    "/convention/read_one.php": {
+      "get": {
+        "summary": "Lire une convention",
+        "description": "Récupère une convention spécifique de la base de données.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Convention récupérée avec succès."
+          },
+          "404": {
+            "description": "Convention non trouvée."
+          }
+        }
+      }
+    },
+    "/convention/update.php": {
+      "put": {
+        "summary": "Mettre à jour une convention",
+        "description": "Met à jour une convention existante dans la base de données.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Convention"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Convention mise à jour avec succès."
+          },
+          "400": {
+            "description": "Données incomplètes."
+          },
+          "404": {
+            "description": "Convention non trouvée."
+          }
+        }
+      }
+    },
+    "/convention/delete.php": {
+      "delete": {
+        "summary": "Supprimer une convention",
+        "description": "Supprime une convention de la base de données.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Convention supprimée avec succès."
+          },
+          "404": {
+            "description": "Convention non trouvée."
+          }
+        }
+      }
+    },
+    "/message/create.php": {
+      "post": {
+        "summary": "Créer un message",
+        "description": "Ajoute un nouveau message à la base de données.",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Message"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Message créé avec succès."
+          },
+          "400": {
+            "description": "Données incomplètes."
+          },
+          "503": {
+            "description": "Service indisponible."
+          }
+        }
+      }
+    },
+    "/message/read.php": {
+      "get": {
+        "summary": "Lire les messages",
+        "description": "Récupère tous les messages de la base de données.",
+        "responses": {
+          "200": {
+            "description": "Messages récupérés avec succès."
+          },
+          "404": {
+            "description": "Aucun message trouvé."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Utilisateur": {
+      "type": "object",
+      "properties": {
+        "noyau_utilisateur__nom": {
+          "type": "string"
+        },
+        "noyau_utilisateur__prenom": {
+          "type": "string"
+        },
+        "noyau_utilisateur__sigle": {
+          "type": "string"
+        },
+        "noyau_utilisateur__mdp": {
+          "type": "string"
+        },
+        "noyau_utilisateur__email": {
+          "type": "string"
+        },
+        "noyau_utilisateur__verrou": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "noyau_utilisateur__nom",
+        "noyau_utilisateur__prenom",
+        "noyau_utilisateur__sigle",
+        "noyau_utilisateur__mdp",
+        "noyau_utilisateur__email",
+        "noyau_utilisateur__verrou"
+      ]
+    },
+    "Convention": {
+      "type": "object",
+      "properties": {
+        "stage_convention_siret": { "type": "string" },
+        "stage_convention_ape": { "type": "string" },
+        "stage_convention_nom_entreprise": { "type": "string" },
+        "stage_convention_tel_entreprise": { "type": "string" },
+        "stage_convention_email_entreprise": { "type": "string" }
+      },
+      "required": ["stage_convention_siret", "stage_convention_nom_entreprise"]
+    },
+    "Message": {
+      "type": "object",
+      "properties": {
+        "stage_message_id_auteur_message": { "type": "integer" },
+        "stage_message_contenu_message": { "type": "string" },
+        "stage_message_privee": { "type": "boolean" },
+        "stage_message_stage_id": { "type": "integer" }
+      },
+      "required": ["stage_message_id_auteur_message", "stage_message_contenu_message"]
+    }
+  }
+}

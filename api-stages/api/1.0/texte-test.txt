@@ -1,0 +1,59 @@
+CREATE CONVENTION
+
+{
+    "stage_convention_siret" : "000",
+    "stage_convention_ape" : "000",
+    "stage_convention_nom_entreprise" : "000",
+    "stage_convention_tel_entreprise" : "000",
+    "stage_convention_email_entreprise" : "000",
+    "stage_convention_nom_signataire_entreprise" : "000",
+    "stage_convention_poste_signataire_entreprise" : "000",
+    "stage_convention_service_entreprise" : "000",
+    "stage_convention_lieu_entreprise" : "000",
+    "stage_convention_numero_etudiant" : "000",
+    "stage_convention_date_naissance_etudiant" : "01/01/01",
+    "stage_convention_tel_etudiant" : "000",
+    "stage_convention_email_perso_etudiant" : "000",
+    "stage_convention_email_etudiant" : "000",
+    "stage_convention_cpam_etudiant" : "000",
+    "stage_convention_prenom_signataire_entreprise" : "000",
+    "stage_convention_sujet_stage" : "000",
+    "stage_convention_date_debut" : "000",
+    "stage_convention_date_fin" : "000",
+    "stage_convention_semaines_stage" : "000",
+    "stage_convention_heures_par_jour_stage" : "000",
+    "stage_convention_repartition" : "000",
+    "stage_convention_heures_par_semaine_stage" : "000",
+    "stage_convention_commentaire_stage" : "000",
+    "stage_convention_activites_stage" : "000",
+    "stage_convention_competences_stage" : "000",
+    "stage_convention_nom_maitre_stage" : "000",
+    "stage_convention_prenom_maitre_stage" : "000",
+    "stage_convention_poste_maitre_stage" : "000",
+    "stage_convention_tel_maitre_stage" : "000",
+    "stage_convention_encadrement_stage" : "000",
+    "stage_convention_nb_conges" : "000",
+    "stage_convention_etat" : "000",
+    "stage_convention_sexe" : "000",
+    "stage_convention_gratification" : "000",
+    "stage_convention_avantages_5bis" : "000",
+    "stage_convention_avantages_5ter" : "000",
+    "stage_convention_signature_etudiant" : "000",
+    "stage_convention_signature_entreprise" : "000",
+    "stage_convention_nom_etudiant" : "000",
+    "stage_convention_prenom_etudiant" : "000",
+    "stage_convention_etudiant_id" : "000",
+    "stage_convention_tuteur_id" : "000",
+    "stage_convention_nb_jours_stage" : "000"
+}
+
+----------------
+
+DELETE CONVENTION
+
+{
+    "stage_convention_id_convention": "8"
+}
+
+----------------
+
