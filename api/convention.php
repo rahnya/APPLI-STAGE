@@ -92,7 +92,6 @@ class Convention {
                     stage_convention_email_maitre_stage;
                     stage_convention_encadrement_stage;
                     stage_convention_nb_conges;
-                    stage_convention_etat;
                     stage_convention_sexe;
                     stage_convention_gratification;
                     stage_convention_avantages_5bis;
@@ -139,7 +138,6 @@ public function search($keywords){
               OR stage_convention_prenom_etudiant LIKE ?
               OR stage_convention_siret LIKE ?
               OR stage_convention_ape LIKE ?
-              OR stage_convention_nom_entreprise LIKE ?
               OR stage_convention_tel_entreprise LIKE ?
               OR stage_convention_email_entreprise LIKE ?
               OR stage_convention_nom_signataire_entreprise LIKE ?
@@ -239,7 +237,6 @@ public function search($keywords){
       stage_convention_email_maitre_stage = :stage_convention_email_maitre_stage,
       stage_convention_encadrement_stage = :stage_convention_encadrement_stage,
       stage_convention_nb_conges = :stage_convention_nb_conges,
-      stage_convention_etat = :stage_convention_etat,
       stage_convention_sexe = :stage_convention_sexe,
       stage_convention_gratification = :stage_convention_gratification,
       stage_convention_avantages_5bis = :stage_convention_avantages_5bis,
@@ -291,7 +288,6 @@ public function search($keywords){
       $this->stage_convention_email_maitre_stage=htmlspecialchars(strip_tags($this->stage_convention_email_maitre_stage));
       $this->stage_convention_encadrement_stage=htmlspecialchars(strip_tags($this->stage_convention_encadrement_stage));
       $this->stage_convention_nb_conges=htmlspecialchars(strip_tags($this->stage_convention_nb_conges));
-      $this->stage_convention_etat=htmlspecialchars(strip_tags($this->stage_convention_etat));
       $this->stage_convention_sexe=htmlspecialchars(strip_tags($this->stage_convention_sexe));
       $this->stage_convention_gratification=htmlspecialchars(strip_tags($this->stage_convention_gratification));
       $this->stage_convention_avantages_5bis=htmlspecialchars(strip_tags($this->stage_convention_avantages_5bis));
@@ -343,7 +339,6 @@ public function search($keywords){
       $stmt->bindParam(':stage_convention_email_maitre_stage',$this->stage_convention_email_maitre_stage);
       $stmt->bindParam(':stage_convention_encadrement_stage',$this->stage_convention_encadrement_stage);
       $stmt->bindParam(':stage_convention_nb_conges',$this->stage_convention_nb_conges);
-      $stmt->bindParam(':stage_convention_etat',$this->stage_convention_etat);
       $stmt->bindParam(':stage_convention_sexe',$this->stage_convention_sexe);
       $stmt->bindParam(':stage_convention_gratification',$this->stage_convention_gratification);
       $stmt->bindParam(':stage_convention_avantages_5bis',$this->stage_convention_avantages_5bis);
