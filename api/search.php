@@ -5,7 +5,7 @@ header("Content-Type: application/json; charset=UTF-8");
 
 // include database and object files
 include_once '../config/database.php';
-include_once '../objects/convention.php';
+include_once 'convention.php';
 
 // instantiate database and stage_convention object
 $database = new Database();
